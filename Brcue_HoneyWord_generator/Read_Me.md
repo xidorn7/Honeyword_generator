@@ -1,4 +1,4 @@
-#The algrothm goes as follow:
+#The algorithm goes as follow:
 
 ##Part of training model:
 1. Choose the size of training sample.
