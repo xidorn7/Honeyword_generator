@@ -8,12 +8,10 @@
 
 ##Part of generate honeyword:
 1. Length:
-  1.1 With probability of 30%, the honeyword share the same length as real password.
-  1.2 Else, pick a length from length distribution(according to F_length).
- 
+ 1.1 With probability of 30%, the honeyword share the same length as real password.
+ 1.2 Else, pick a length from length distribution(according to F_length).
 2. Pick the init character of the honeyword:
-  2.1 With probability of 50%, the init character is ramdonly pick from real password.
-  2.2 Else, pick a random character from the frequency of every character(F_char).
-
+ 2.1 With probability of 50%, the init character is ramdonly pick from real password.
+ 2.2 Else, pick a random character from the frequency of every character(F_char).
 3. Pick the following character:
-  3.1 With the probability of 10%
+ 3.1 With the probability of 10%
