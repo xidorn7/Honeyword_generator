@@ -2,7 +2,8 @@ import random
 class HoneyWord(object):
     
     
-    def __init__(self, n, size):
+    def __init__(self, n, size, filename):
+        self.filename = filename
         [self.code, self.F_length, self.length] = self.train(n)
         [self.F_char, self.F_postfix]= self.F_post()
         self.size = size
@@ -13,7 +14,7 @@ class HoneyWord(object):
         code = []
         length_count={}
         F_length = {}
-        for line in open("./rockyou-withcount.txt"):
+        for line in open(self.filename):
             if count > num:
                 break;
             n = 0;
