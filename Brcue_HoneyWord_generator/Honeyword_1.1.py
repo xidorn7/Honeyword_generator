@@ -3,26 +3,26 @@ import random
 class HoneyWord(object):
     
     
-    def __init__(self, n, size, filename):
+    def __init__(self, size, filename):
         self.filename = filename
-        [self.code, self.F_length, self.length] = self.train(n)
+        [self.code, self.F_length, self.length] = self.train()
         [self.F_char, self.F_postfix]= self.F_post()
         self.size = size
         
         
     def train(self, num):
-        count = 0;
+        ##count = 0;
         code = {}
         length_count={}
         F_length = {}
         for line in open(self.filename):
-            if count > num:
-                break;
+            ##if count > num:
+                ##break;
             n = 0;
             word = line.split(" ");
             while word[n] == '':
                 n+=1;
-            count += 1;
+            ##count += 1;
             code[word[n+1][:-1]] = int(word[n]);
             l = len(word[n+1])-1;
             if l in length_count:
@@ -125,3 +125,22 @@ class HoneyWord(object):
                     honey += key[i_within]
             result.append(honey)
         return result
+    
+def writehoneyword(output,honeywordlist):
+    outfile = open(output, "a")
+    for line in honeywordlist:
+        outfile.write(line + "|")
+    outfile.write("\n")
+    
+        
+
+if __name__ == '__main__':
+    
+    N = int(sys.argv[1])
+    inputfile = sys.argv[2]
+    outputfile = sys.argv[3]
+    train_set = (sys.argv[4]) ? (sys.argv[4]) : "./rackyou-withcount.txt"
+    honey = HoneyWord(N, train_set)
+    for line in open(inputfile):
+        writehoneyword(outputfile, honey.generator(line))
+            
