@@ -40,7 +40,7 @@ def makeHw(cnt, inputfile, outputfile):
         honeyPass[:] = []
 
 if __name__ == '__main__':
-  N = int(sys.argv[1])
+  N = int(sys.argv[1])-1
   inputfile = sys.argv[2]
   outputfile = sys.argv[3]
   makeHw(N, inputfile, outputfile)
