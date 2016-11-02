@@ -131,7 +131,7 @@ def main():
         filename = sys.argv[4]
     else:
         filename = "./rockyou-withcount.txt"
-    hh = HoneyWord(int(sys.argv[1]),filename)
+    hh = HoneyWord(int(sys.argv[1])-1,filename)
     for word in open(sys.argv[2]):
         if word[-1] == '\n':
             word = word[:-1]
