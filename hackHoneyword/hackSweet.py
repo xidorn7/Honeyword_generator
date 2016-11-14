@@ -8,15 +8,16 @@ RockYou training set, that is the real password
 Frequency dictionary of word in sweetwords
 
 """
+# Function needed to read sweet words from command line
 
-sweetWords = [["we", "wah", "jah"], ["ge", "wah","way"], ["gree", "green", "grot"]]
+sweetWords = []
 rockYou = []
 uniqueList = []
 FREQ_THRESH = 5
 
 
 
-PATH_TO_FILE = "/Users/divinity/security/rockyou-withcount.txt"
+PATH_TO_FILE = "rockyou-withcount.txt"
 
 
 for line in open(PATH_TO_FILE,"r").readlines():
