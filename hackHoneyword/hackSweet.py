@@ -83,6 +83,3 @@ for word in uniqueList:
 
 
 
-        
-print probPass
-
